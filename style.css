@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap");
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Cyan1: #2BB3B1;
+  --Cyan2: #4ABEBD;
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 1rem;
+}
+p{
+    color: white;
+    font-size: .875rem;
+    line-height: 1.5rem;
+}
+
+body{
+    padding: 0 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Gray);
+    font-family: 'Karla', sans-serif;
+}
+
+main{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 40rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    box-shadow: 0 8px 15px 5px hsla(179, 43%, 34%, 0.25);
+}
+
+.item{
+    padding: 2rem;
+}
+
+.item1{
+    background-color: white;
+    grid-column: 1/-1;
+}
+.item1 h1{
+    color: var(--Cyan);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.item1 h2{
+    color: var(--Bright-Yellow);
+    margin-bottom: .5rem;
+}
+.item1 p{
+    color: var(--Grayish-Blue);
+}
+
+.item2{
+    background-color: var(--Cyan1);
+}
+.item2 h2, span{
+    color: white;
+}
+.item2 span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: .5rem;
+}
+.item2 h2{
+    margin-bottom: 1rem;
+}
+.item2 p{
+    color: var(--Light-Gray);
+    margin-bottom: .25rem;
+}
+.signup{
+    display: block;
+    text-decoration: none;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 hsla(179, 43%, 34%, 0.35);
+}
+.item3{
+    background-color: var(--Cyan2);
+}
+.item3 h2{
+    color: white;
+    margin-bottom: 1rem;
+}
+.item3 p{
+    width: 75%;
+}
+@media (max-width: 550px){
+    body{
+        padding: 4rem 1rem;
+    }
+    main{
+        grid-template-columns: 1fr;
+        width: min(100%, 20rem);
+    }
+}
